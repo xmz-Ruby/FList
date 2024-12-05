@@ -87,14 +87,7 @@ export default defineUserConfig({
       mountPath: "/tvbox",
       // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
       analysis: fileUrlTreeAnalysis({
-        "/windows电脑版/TV-win-v1.2.5.zip": "https://github.site/Greatwallcorner/TV-Multiplatform/releases/download/v1.2.5/TV-win-v1.2.5.zip"
-      }),
-      downProxy: cloudflarePagesDownProxy(),//如果文件树地址下载比较慢，也可以配置代理
-    },
-    {
-      mountPath: "/tvbox",
-      // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
-      analysis: fileUrlTreeAnalysis({
+        "/windows电脑版/TV-win-v1.2.5.zip": "https://github.site/Greatwallcorner/TV-Multiplatform/releases/download/v1.2.5/TV-win-v1.2.5.zip",
         "/windows电脑版/vlc-3.0.21-win32.exe": "https://get.videolan.org/vlc/3.0.21/win32/vlc-3.0.21-win32.exe",
         "/windows电脑版/vlc-3.0.21-win64.exe": "https://get.videolan.org/vlc/3.0.21/win64/vlc-3.0.21-win64.exe",
         "/OK影视-电视版-2.6.2.apk": "https://www.mangzhexuexi.com/tvbox/OK%E5%BD%B1%E8%A7%86-%E7%94%B5%E8%A7%86%E7%89%88-2.6.2.apk",
