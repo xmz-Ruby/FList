@@ -89,7 +89,9 @@ export default defineUserConfig({
       analysis: fileUrlTreeAnalysis({
         "/windows电脑版/vlc-3.0.21-win32.exe": "https://get.videolan.org/vlc/3.0.21/win32/vlc-3.0.21-win32.exe",
         "/windows电脑版/vlc-3.0.21-win64.exe": "https://get.videolan.org/vlc/3.0.21/win64/vlc-3.0.21-win64.exe",
-        "/windows电脑版/README.md": "/tvbox/win.md"
+        "/OK影视-电视版-2.6.2.apk": "/tvbox/OK-tv.262.apk",
+        "/OK影视-手机版-2.6.2.apk": "/tvbox/OK-mb.262.apk",
+        "/windows电脑版/使用说明.md": "/tvbox/win.md"
       }),
     },
     // ... 可以配置多个挂载路径和仓库，以此类推
