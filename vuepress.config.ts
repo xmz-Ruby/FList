@@ -31,49 +31,57 @@ export default defineUserConfig({
   shouldPrefetch: true,
   // 主题配置 FileList 是 vuepress 的一个主题，文件展示的功能全部由这个主题提供。
   theme: FileList([
+    // {
+    //   // 挂载路径
+    //   mountPath: "/KnapsackToGo4下载",
+    //   // 文件解析器，这里使用githubReleasesFilesAnalysis,可以解析github的release文件
+    //   analysis: githubReleasesFilesAnalysis({
+    //     // 仓库所有者的用户名
+    //     user: "jianjianai",
+    //     // 仓库所有者的仓库名
+    //     repository: "KnapsackToGo4"
+    //   }),
+    // },
+    // {
+    //   mountPath: "/",
+    //   analysis: githubReleasesFilesAnalysis({ user: "jianjianai", repository: "FList" }),
+    //   // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
+    //   // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
+    //   // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
+    //   downProxy: cloudflarePagesDownProxy(),
+    // },
+    // {
+    //   mountPath: "/",
+    //   // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
+    //   analysis: fileUrlTreeAnalysis({
+    //     "/test2/文件树-测试视频1.mp4": "https://github.com/jianjianai/FList/releases/download/root/test.video.2.1080p.webm",
+    //     "/文件树测试/文件树-测试视频1.mp4": "https://github.com/jianjianai/FList/releases/download/root/test.video.2.1080p.webm",
+    //     "/文件树-测试视频1.mp4": "https://github.com/jianjianai/FList/releases/download/root/test.video.2.1080p.webm"
+    //   }),
+    //   downProxy: cloudflarePagesDownProxy(),//如果文件树地址下载比较慢，也可以配置代理
+    // },
+    // {
+    //   mountPath: "/",
+    //   // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
+    //   analysis: fileUrlTreeAnalysis({
+    //     "/金刚狼.mp4": "https://wtv.mangzhexuexi.com/uc/xr21bym9/3486456090/66f523ba4f76affabba540f3b110d2774b64f98b/66f523bad030729c01f147a7bda31b760d1f97f8?Expires=1733218908&OSSAccessKeyId=LTAI5tJJpWQEfrcKHnd1LqsZ&Signature=SboG4zvWTvE8loNPRKJKiFQottM=&x-oss-traffic-limit=503316480&response-content-disposition=attachment; filename=Deadpool.And.Wolverine.2024.1080p.REPACK.TELESYNC.x264.COLLECTiVE.mp4;filename*=utf-8''Deadpool.And.Wolverine.2024.1080p.REPACK.TELESYNC.x264.COLLECTiVE.mp4&callback-var=eyJ4OmF1IjoiLSIsIng6dWQiOiI0LTItMS0yLTEtTi0zLWZ0LTAtNC0wLU4iLCJ4OnNwIjoiMTAwIiwieDp0b2tlbiI6IjQtMWMxOWFiZWExZjQzYTljOTEyYjgxODVjMDA0ZWU1MjMtMi03LTE1MzYxMS0wNTJhOGFhMzFkNzY0MTFiOGE3N2JkMWVhMDRiNmVkMy0wLTAtMC0wLTJjZTRlMzQ5ZjU2ZjViZjYzM2I2ZDE1NmUxMTNiZWE3IiwieDp0dGwiOiIxMDgwMCJ9&callback=eyJjYWxsYmFja0JvZHlUeXBlIjoiYXBwbGljYXRpb24vanNvbiIsImNhbGxiYWNrU3RhZ2UiOiJiZWZvcmUtZXhlY3V0ZSIsImNhbGxiYWNrRmFpbHVyZUFjdGlvbiI6Imlnbm9yZSIsImNhbGxiYWNrVXJsIjoiaHR0cHM6Ly9hdXRoLWNkbi51Yy5jbi9vdXRlci9vc3MvY2hlY2twbGF5IiwiY2FsbGJhY2tCb2R5Ijoie1wiaG9zdFwiOiR7aHR0cEhlYWRlci5ob3N0fSxcInNpemVcIjoke3NpemV9LFwicmFuZ2VcIjoke2h0dHBIZWFkZXIucmFuZ2V9LFwicmVmZXJlclwiOiR7aHR0cEhlYWRlci5yZWZlcmVyfSxcImNvb2tpZVwiOiR7aHR0cEhlYWRlci5jb29raWV9LFwibWV0aG9kXCI6JHtodHRwSGVhZGVyLm1ldGhvZH0sXCJpcFwiOiR7Y2xpZW50SXB9LFwicG9ydFwiOiR7Y2xpZW50UG9ydH0sXCJvYmplY3RcIjoke29iamVjdH0sXCJzcFwiOiR7eDpzcH0sXCJ1ZFwiOiR7eDp1ZH0sXCJ0b2tlblwiOiR7eDp0b2tlbn0sXCJhdVwiOiR7eDphdX0sXCJ0dGxcIjoke3g6dHRsfSxcImR0X3NwXCI6JHt4OmR0X3NwfSxcImhzcFwiOiR7eDpoc3B9LFwiY2xpZW50X3Rva2VuXCI6JHtxdWVyeVN0cmluZy5jbGllbnRfdG9rZW59fSJ9&ud=4-2-1-2-1-N-3-ft-0-4-0-N"
+    //   })
+    // },
+    // {
+    //   mountPath: "/ProgrammingVTuberLogos",
+    //   analysis: githubReposAnalysis({
+    //     user: "Aikoyori",
+    //     repository: "ProgrammingVTuberLogos",
+    //   }),
+    //   downProxy: cloudflarePagesDownProxy()
+    // },
     {
-      // 挂载路径
-      mountPath: "/KnapsackToGo4下载",
-      // 文件解析器，这里使用githubReleasesFilesAnalysis,可以解析github的release文件
-      analysis: githubReleasesFilesAnalysis({
-        // 仓库所有者的用户名
-        user: "jianjianai",
-        // 仓库所有者的仓库名
-        repository: "KnapsackToGo4"
-      }),
-    },
-    {
-      mountPath: "/",
-      analysis: githubReleasesFilesAnalysis({ user: "jianjianai", repository: "FList" }),
-      // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
-      // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
-      // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
-      downProxy: cloudflarePagesDownProxy(),
-    },
-    {
-      mountPath: "/",
+      mountPath: "/tvbox",
       // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
       analysis: fileUrlTreeAnalysis({
-        "/test2/文件树-测试视频1.mp4": "https://github.com/jianjianai/FList/releases/download/root/test.video.2.1080p.webm",
-        "/文件树测试/文件树-测试视频1.mp4": "https://github.com/jianjianai/FList/releases/download/root/test.video.2.1080p.webm",
-        "/文件树-测试视频1.mp4": "https://github.com/jianjianai/FList/releases/download/root/test.video.2.1080p.webm"
+        "/tvbox/windows电脑版/TV-win-v1.2.5.zip": "https://github.com/Greatwallcorner/TV-Multiplatform/releases/download/v1.2.5/TV-win-v1.2.5.zip"
       }),
       downProxy: cloudflarePagesDownProxy(),//如果文件树地址下载比较慢，也可以配置代理
-    },
-    {
-      mountPath: "/",
-      // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
-      analysis: fileUrlTreeAnalysis({
-        "/金刚狼.mp4": "https://wtv.mangzhexuexi.com/uc/xr21bym9/3486456090/66f523ba4f76affabba540f3b110d2774b64f98b/66f523bad030729c01f147a7bda31b760d1f97f8?Expires=1733218908&OSSAccessKeyId=LTAI5tJJpWQEfrcKHnd1LqsZ&Signature=SboG4zvWTvE8loNPRKJKiFQottM=&x-oss-traffic-limit=503316480&response-content-disposition=attachment; filename=Deadpool.And.Wolverine.2024.1080p.REPACK.TELESYNC.x264.COLLECTiVE.mp4;filename*=utf-8''Deadpool.And.Wolverine.2024.1080p.REPACK.TELESYNC.x264.COLLECTiVE.mp4&callback-var=eyJ4OmF1IjoiLSIsIng6dWQiOiI0LTItMS0yLTEtTi0zLWZ0LTAtNC0wLU4iLCJ4OnNwIjoiMTAwIiwieDp0b2tlbiI6IjQtMWMxOWFiZWExZjQzYTljOTEyYjgxODVjMDA0ZWU1MjMtMi03LTE1MzYxMS0wNTJhOGFhMzFkNzY0MTFiOGE3N2JkMWVhMDRiNmVkMy0wLTAtMC0wLTJjZTRlMzQ5ZjU2ZjViZjYzM2I2ZDE1NmUxMTNiZWE3IiwieDp0dGwiOiIxMDgwMCJ9&callback=eyJjYWxsYmFja0JvZHlUeXBlIjoiYXBwbGljYXRpb24vanNvbiIsImNhbGxiYWNrU3RhZ2UiOiJiZWZvcmUtZXhlY3V0ZSIsImNhbGxiYWNrRmFpbHVyZUFjdGlvbiI6Imlnbm9yZSIsImNhbGxiYWNrVXJsIjoiaHR0cHM6Ly9hdXRoLWNkbi51Yy5jbi9vdXRlci9vc3MvY2hlY2twbGF5IiwiY2FsbGJhY2tCb2R5Ijoie1wiaG9zdFwiOiR7aHR0cEhlYWRlci5ob3N0fSxcInNpemVcIjoke3NpemV9LFwicmFuZ2VcIjoke2h0dHBIZWFkZXIucmFuZ2V9LFwicmVmZXJlclwiOiR7aHR0cEhlYWRlci5yZWZlcmVyfSxcImNvb2tpZVwiOiR7aHR0cEhlYWRlci5jb29raWV9LFwibWV0aG9kXCI6JHtodHRwSGVhZGVyLm1ldGhvZH0sXCJpcFwiOiR7Y2xpZW50SXB9LFwicG9ydFwiOiR7Y2xpZW50UG9ydH0sXCJvYmplY3RcIjoke29iamVjdH0sXCJzcFwiOiR7eDpzcH0sXCJ1ZFwiOiR7eDp1ZH0sXCJ0b2tlblwiOiR7eDp0b2tlbn0sXCJhdVwiOiR7eDphdX0sXCJ0dGxcIjoke3g6dHRsfSxcImR0X3NwXCI6JHt4OmR0X3NwfSxcImhzcFwiOiR7eDpoc3B9LFwiY2xpZW50X3Rva2VuXCI6JHtxdWVyeVN0cmluZy5jbGllbnRfdG9rZW59fSJ9&ud=4-2-1-2-1-N-3-ft-0-4-0-N"
-      })
-    },
-    {
-      mountPath: "/ProgrammingVTuberLogos",
-      analysis: githubReposAnalysis({
-        user: "Aikoyori",
-        repository: "ProgrammingVTuberLogos",
-      }),
-      downProxy: cloudflarePagesDownProxy()
     },
     // ... 可以配置多个挂载路径和仓库，以此类推
   ])
