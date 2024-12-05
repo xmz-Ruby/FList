@@ -28,7 +28,7 @@ export default defineUserConfig({
   head: [['link', { rel: 'icon', href: '/logo.png' }]],
   // 页面预加载，所有其它页面所需的文件都会被预拉取。这对于小型站点来说是十分有帮助的，因为它会大大提升页面切换的速度。但是在你的网站有很多页面时不建议你这么做。
   // 简单来说就是，如果你的文件不多就可以打开这个选项，可以大大提高页面切换的速度，如果文件非常多就不建议打开。建议超过100个文件就不要打开这个选项。
-  shouldPrefetch: false,
+  shouldPrefetch: true,
   // 主题配置 FileList 是 vuepress 的一个主题，文件展示的功能全部由这个主题提供。
   theme: FileList([
     // {
@@ -76,14 +76,6 @@ export default defineUserConfig({
     //   downProxy: cloudflarePagesDownProxy()
     // },
     {
-      mountPath: "/tvbox/windows电脑版-备用",
-      analysis: githubReleasesFilesAnalysis({ user: "Greatwallcorner", repository: "TV-Multiplatform" }),
-      // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
-      // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
-      // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
-      downProxy: cloudflarePagesDownProxy(),
-    },
-    {
       mountPath: "/tvbox",
       // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
       analysis: fileUrlTreeAnalysis({
@@ -92,7 +84,7 @@ export default defineUserConfig({
         "/windows电脑版/vlc-3.0.21-win64.exe": "https://get.videolan.org/vlc/3.0.21/win64/vlc-3.0.21-win64.exe",
         "/OK影视-电视版-2.6.2.apk": "https://www.mangzhexuexi.com/tvbox/OK%E5%BD%B1%E8%A7%86-%E7%94%B5%E8%A7%86%E7%89%88-2.6.2.apk",
         "/OK影视-手机版-2.6.2.apk": "https://www.mangzhexuexi.com/tvbox/OK%E5%BD%B1%E8%A7%86-%E6%89%8B%E6%9C%BA%E7%89%88-2.6.2.apk",
-        "/windows电脑版/使用说明.md": "https://www.mangzhexuexi.com/tvbox/win.md"
+        "/windows电脑版/使用说明.md": "/tvbox/win.md"
       }),
     },
     // ... 可以配置多个挂载路径和仓库，以此类推
