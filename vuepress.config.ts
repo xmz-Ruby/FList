@@ -83,7 +83,6 @@ export default defineUserConfig({
         "/tvbox/windows电脑版/vlc-3.0.21-win32.exe": "https://get.videolan.org/vlc/3.0.21/win32/vlc-3.0.21-win32.exe",
         "/tvbox/windows电脑版/vlc-3.0.21-win64.exe": "https://get.videolan.org/vlc/3.0.21/win64/vlc-3.0.21-win64.exe",
         "/tvbox/windows电脑版/README.md": "/tvbox/win.md"
-        ""
       }),
       downProxy: cloudflarePagesDownProxy(),//如果文件树地址下载比较慢，也可以配置代理
     },
