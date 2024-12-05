@@ -76,7 +76,7 @@ export default defineUserConfig({
     //   downProxy: cloudflarePagesDownProxy()
     // },
     {
-      mountPath: "/tvbox/windows电脑版2",
+      mountPath: "/tvbox/windows电脑版-备用",
       analysis: githubReleasesFilesAnalysis({ user: "Greatwallcorner", repository: "TV-Multiplatform" }),
       // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
       // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
@@ -87,7 +87,7 @@ export default defineUserConfig({
       mountPath: "/tvbox",
       // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
       analysis: fileUrlTreeAnalysis({
-        "/windows电脑版/TV-win-v1.2.5.zip": "https://github.com/Greatwallcorner/TV-Multiplatform/releases/download/v1.2.5/TV-win-v1.2.5.zip"
+        "/windows电脑版/TV-win-v1.2.5.zip": "https://github.site/Greatwallcorner/TV-Multiplatform/releases/download/v1.2.5/TV-win-v1.2.5.zip"
       }),
       downProxy: cloudflarePagesDownProxy(),//如果文件树地址下载比较慢，也可以配置代理
     },
