@@ -85,7 +85,7 @@ export default defineUserConfig({
         "/windows电脑版/电视台在线播放.md": "/tvbox/tv.md",
         "/windows电脑版/使用说明.md": "/tvbox/win.md",
         "/OK影视-电视版-2.6.2.apk": "http://cr2.mangzhexuexi.com/tvbox/OK%E5%BD%B1%E8%A7%86-%E7%94%B5%E8%A7%86%E7%89%88-2.6.2.apk",
-        "/OK影视-手机版-2.6.2.apk": "https://www.mangzhexuexi.com/tvbox/OK%E5%BD%B1%E8%A7%86-%E6%89%8B%E6%9C%BA%E7%89%88-2.6.2.apk"
+        "/OK影视-手机版-2.6.2.apk": "http://cr2.mangzhexuexi.com/tvbox/OK%E5%BD%B1%E8%A7%86-%E6%89%8B%E6%9C%BA%E7%89%88-2.6.2.apk"
       }),
     },
     // ... 可以配置多个挂载路径和仓库，以此类推
