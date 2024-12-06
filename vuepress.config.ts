@@ -79,11 +79,18 @@ export default defineUserConfig({
       mountPath: "/tvbox",
       // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
       analysis: fileUrlTreeAnalysis({
+        "/OK影视-电视版-2.6.2.apk": "https://r2.mangzhexuexi.com/tvbox/OK%E5%BD%B1%E8%A7%86-%E7%94%B5%E8%A7%86%E7%89%88-2.6.2.apk",
+        "/OK影视-手机版-2.6.2.apk": "https://r2.mangzhexuexi.com/tvbox/OK%E5%BD%B1%E8%A7%86-%E6%89%8B%E6%9C%BA%E7%89%88-2.6.2.apk"
+      }),
+      downProxy: cloudflarePagesDownProxy()
+    },
+    {
+      mountPath: "/tvbox",
+      // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
+      analysis: fileUrlTreeAnalysis({
         "/windows电脑版/TV-win-v1.2.5.zip": "https://github.site/Greatwallcorner/TV-Multiplatform/releases/download/v1.2.5/TV-win-v1.2.5.zip",
         "/windows电脑版/vlc-3.0.21-win32.exe": "https://get.videolan.org/vlc/3.0.21/win32/vlc-3.0.21-win32.exe",
         "/windows电脑版/vlc-3.0.21-win64.exe": "https://get.videolan.org/vlc/3.0.21/win64/vlc-3.0.21-win64.exe",
-        "/OK影视-电视版-2.6.2.apk": "https://r2.mangzhexuexi.com/tvbox/OK%E5%BD%B1%E8%A7%86-%E7%94%B5%E8%A7%86%E7%89%88-2.6.2.apk",
-        "/OK影视-手机版-2.6.2.apk": "https://r2.mangzhexuexi.com/tvbox/OK%E5%BD%B1%E8%A7%86-%E6%89%8B%E6%9C%BA%E7%89%88-2.6.2.apk",
         "/windows电脑版/电视台在线播放.md": "/tvbox/tv.md",
         "/windows电脑版/使用说明.md": "/tvbox/win.md"
       }),
