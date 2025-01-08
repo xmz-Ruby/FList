@@ -79,7 +79,7 @@ export default defineUserConfig({
       mountPath: "/tvbox",
       // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
       analysis: fileUrlTreeAnalysis({
-        "/windows电脑版/TV-win-v1.2.5.zip": "https://github.site/Greatwallcorner/TV-Multiplatform/releases/download/v1.2.5/TV-win-v1.2.5.zip",
+        "/windows电脑版/TV-win-20241215130903.zip": "https://github.site/Greatwallcorner/TV-Multiplatform/releases/download/20241215130903/TV-win-20241215130903.zip",
         "/windows电脑版/vlc-3.0.21-win32.exe": "https://get.videolan.org/vlc/3.0.21/win32/vlc-3.0.21-win32.exe",
         "/windows电脑版/vlc-3.0.21-win64.exe": "https://get.videolan.org/vlc/3.0.21/win64/vlc-3.0.21-win64.exe",
         "/windows电脑版/电视台在线播放.md": "https://r2.mangzhexuexi.com/tvbox/tv.md",
