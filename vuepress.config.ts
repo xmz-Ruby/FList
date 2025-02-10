@@ -76,10 +76,19 @@ export default defineUserConfig({
     //   downProxy: cloudflarePagesDownProxy()
     // },
     {
+      mountPath: "/",
+      // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
+      analysis: fileUrlTreeAnalysis({
+        "/windows电脑版/TV-win-20241215130903.zip": "https://github.com/Greatwallcorner/TV-Multiplatform/releases/download/20241215130903/TV-win-20241215130903.zip",
+        "/iptv直播源/ipv4.txt": "https://raw.githubusercontent.com/PizazzGY/TV/refs/heads/master/output/user_result.txt",
+        "/iptv直播源/ipv4.m3u": "https://raw.githubusercontent.com/PizazzGY/TV/refs/heads/master/output/user_result.m3u"
+      }),
+      downProxy: cloudflarePagesDownProxy(),//如果文件树地址下载比较慢，也可以配置代理
+    },
+    {
       mountPath: "/tvbox",
       // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
       analysis: fileUrlTreeAnalysis({
-        "/windows电脑版/TV-win-20241215130903.zip": "https://github.site/Greatwallcorner/TV-Multiplatform/releases/download/20241215130903/TV-win-20241215130903.zip",
         "/windows电脑版/vlc-3.0.21-win32.exe": "https://get.videolan.org/vlc/3.0.21/win32/vlc-3.0.21-win32.exe",
         "/windows电脑版/vlc-3.0.21-win64.exe": "https://get.videolan.org/vlc/3.0.21/win64/vlc-3.0.21-win64.exe",
         "/windows电脑版/电视台在线播放.md": "https://r2.mangzhexuexi.com/tvbox/tv.md",
