@@ -97,7 +97,8 @@ export default defineUserConfig({
         "/windows电脑版/使用说明.md": "https://r2.mangzhexuexi.com/tvbox/win.md",
         "/OK影视-电视版-2.7.0.apk": "http://cr2.mangzhexuexi.com/tvbox/OK%E5%BD%B1%E8%A7%86-%E7%94%B5%E8%A7%86%E7%89%88-2.7.0.apk",
         "/OK影视-手机版-2.7.0.apk": "http://cr2.mangzhexuexi.com/tvbox/OK%E5%BD%B1%E8%A7%86-%E6%89%8B%E6%9C%BA%E7%89%88-2.7.0.apk",
-        "/电视直播-油桃TV-20250306.apk": "http://cr2.mangzhexuexi.com/tvbox/%E6%B2%B9%E6%A1%83TV-20250306.apk"
+        "/电视直播-油桃TV-20250306.apk": "http://cr2.mangzhexuexi.com/tvbox/%E6%B2%B9%E6%A1%83TV-20250306.apk",
+        "/电视直播-WebViewTV_1.10.7.apk": "http://cr2.mangzhexuexi.com/tvbox/WebViewTV_1.10.7.apk"
       }),
     },
     // ... 可以配置多个挂载路径和仓库，以此类推
