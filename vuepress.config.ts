@@ -90,7 +90,7 @@ export default defineUserConfig({
       mountPath: "/tvbox",
       // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
       analysis: fileUrlTreeAnalysis({
-        "/tvbox/iptv直播源/ITV.txt": "http://cr2.mangzhexuexi.com/tvbox/ITV.txt",
+        "/iptv直播源/ITV.txt": "http://cr2.mangzhexuexi.com/tvbox/ITV.txt",
         "/windows电脑版/vlc-3.0.21-win32.exe": "https://get.videolan.org/vlc/3.0.21/win32/vlc-3.0.21-win32.exe",
         "/windows电脑版/vlc-3.0.21-win64.exe": "https://get.videolan.org/vlc/3.0.21/win64/vlc-3.0.21-win64.exe",
         "/windows电脑版/电视台在线播放.md": "https://r2.mangzhexuexi.com/tvbox/tv.md",
