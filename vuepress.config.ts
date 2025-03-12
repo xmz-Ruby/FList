@@ -80,8 +80,8 @@ export default defineUserConfig({
       // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
       analysis: fileUrlTreeAnalysis({
         "/tvbox/windows电脑版/TV-win-20241215130903.zip": "https://github.com/Greatwallcorner/TV-Multiplatform/releases/download/20241215130903/TV-win-20241215130903.zip",
-        "/tvbox/iptv直播源/aptv.m3u": "https://github.com/Kimentanm/aptv/raw/master/m3u/iptv.m3u",
-        "/tvbox/iptv直播源/AI直播.m3u": "https://raw.githubusercontent.com/PizazzGY/TV/refs/heads/master/output/user_result.m3u",
+        "/tvbox/iptv直播源/aptv-m3u.txt": "https://github.com/Kimentanm/aptv/raw/master/m3u/iptv.m3u",
+        "/tvbox/iptv直播源/AI直播-m3u.txt": "https://raw.githubusercontent.com/PizazzGY/TV/refs/heads/master/output/user_result.m3u",
         "/cursor/reset-machineId.ps1": "https://raw.githubusercontent.com/yuaotian/go-cursor-help/refs/heads/master/scripts/run/cursor_win_id_modifier.ps1"
       }),
       downProxy: cloudflarePagesDownProxy(),//如果文件树地址下载比较慢，也可以配置代理
