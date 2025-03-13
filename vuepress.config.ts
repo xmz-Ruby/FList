@@ -84,10 +84,18 @@ export default defineUserConfig({
     //   downProxy: cloudflarePagesDownProxy()
     // },
     {
+      mountPath: "/tvbox/windows电脑版/TV-Multiplatform",
+      analysis: githubReleasesFilesAnalysis({ user: "Greatwallcorner", repository: "TV-Multiplatform" }),
+      // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
+      // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
+      // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
+      downProxy: cloudflarePagesDownProxy(),
+    },
+    {
       mountPath: "/",
       // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
       analysis: fileUrlTreeAnalysis({
-        "/tvbox/windows电脑版/TV-win-20241215130903.zip": "https://github.com/Greatwallcorner/TV-Multiplatform/releases/download/20241215130903/TV-win-20241215130903.zip",
+        // "/tvbox/windows电脑版/TV-win-20241215130903.zip": "https://github.com/Greatwallcorner/TV-Multiplatform/releases/download/20241215130903/TV-win-20241215130903.zip",
         "/tvbox/iptv直播源/aptv-m3u.txt": "https://github.com/Kimentanm/aptv/raw/master/m3u/iptv.m3u",
         "/tvbox/iptv直播源/AI直播-m3u.txt": "https://raw.githubusercontent.com/PizazzGY/TV/refs/heads/master/output/user_result.m3u",
         "/cursor/reset-machineId.ps1": "https://raw.githubusercontent.com/yuaotian/go-cursor-help/refs/heads/master/scripts/run/cursor_win_id_modifier.ps1"
