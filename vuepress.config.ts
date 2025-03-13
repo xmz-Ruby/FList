@@ -51,7 +51,7 @@ export default defineUserConfig({
       downProxy: cloudflarePagesDownProxy(),
     },
     {
-      mountPath: "/常用工具/看看外面的世界[karing]🪜✈️",
+      mountPath: "/常用工具/看看外面的世界[karing]",
       analysis: githubReleasesFilesAnalysis({ user: "KaringX", repository: "karing" }),
       // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
       // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
