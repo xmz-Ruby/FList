@@ -126,6 +126,14 @@ export default defineUserConfig({
         "/电视直播-WebViewTV_1.10.7.apk": "http://cr2.mangzhexuexi.com/tvbox/WebViewTV_1.10.7.apk"
       }),
     },
+    {
+      mountPath: "/常用工具",
+      // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
+      analysis: fileUrlTreeAnalysis({
+        "/磁盘占用空间分布图/TreeSize.exe": "https://r2.mangzhexuexi.com/tvbox/TreeSize-Free-v2.5.1.149.exe",
+        "/卸载工具/geek.exe": "https://r2.mangzhexuexi.com/tvbox/geek.exe"
+      }),
+    },
     // ... 可以配置多个挂载路径和仓库，以此类推
   ])
 })
