@@ -131,7 +131,8 @@ export default defineUserConfig({
       // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
       analysis: fileUrlTreeAnalysis({
         "/磁盘占用空间分布图/TreeSize.exe": "https://r2.mangzhexuexi.com/tvbox/TreeSize-Free-v2.5.1.149.exe",
-        "/卸载工具/geek.exe": "https://r2.mangzhexuexi.com/tvbox/geek.exe"
+        "/卸载工具/geek.exe": "https://r2.mangzhexuexi.com/tvbox/geek.exe",
+        "/下载工具/NDM.exe": "https://r2.mangzhexuexi.com/tvbox/NeatDM_setup.exe"
       }),
     },
     // ... 可以配置多个挂载路径和仓库，以此类推
