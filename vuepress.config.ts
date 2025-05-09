@@ -74,6 +74,14 @@ export default defineUserConfig({
       // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
       downProxy: cloudflarePagesDownProxy(),
     },
+    {
+      mountPath: "/常用工具/局域网/局域网文件共享",
+      analysis: githubReleasesFilesAnalysis({ user: "localsend", repository: "localsend" }),
+      // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
+      // 这个是为了解决github的国内下载慢的问题，和跨域问题，建议配置，不然pdf，txt，md等文件因为跨域无法预览
+      // 如果你使用的不是 cloudflare Pages 部署需要删掉这一行，因为如果不是cloudflare Pages部署，这个代理是无法正常工作的
+      downProxy: cloudflarePagesDownProxy(),
+    },
     // {
     //   mountPath: "/",
     //   // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
@@ -114,8 +122,7 @@ export default defineUserConfig({
       analysis: fileUrlTreeAnalysis({
         // "/tvbox/windows电脑版/TV-win-20241215130903.zip": "https://github.com/Greatwallcorner/TV-Multiplatform/releases/download/20241215130903/TV-win-20241215130903.zip",
         // "/tvbox/iptv直播源/aptv-m3u.txt": "https://github.com/Kimentanm/aptv/raw/master/m3u/iptv.m3u",
-        "/tvbox/iptv直播源/AI直播-m3u.txt": "https://raw.githubusercontent.com/PizazzGY/TV/refs/heads/master/output/user_result.m3u",
-        "/cursor/reset-machineId.ps1": "https://raw.githubusercontent.com/yuaotian/go-cursor-help/refs/heads/master/scripts/run/cursor_win_id_modifier.ps1"
+        "/tvbox/iptv直播源/AI直播-m3u.txt": "https://raw.githubusercontent.com/PizazzGY/TV/refs/heads/master/output/user_result.m3u"
       }),
       downProxy: cloudflarePagesDownProxy(),//如果文件树地址下载比较慢，也可以配置代理
     },
@@ -140,7 +147,8 @@ export default defineUserConfig({
       analysis: fileUrlTreeAnalysis({
         "/磁盘占用空间分布图/TreeSize.exe": "https://r2.mangzhexuexi.com/tvbox/TreeSize-Free-v2.5.1.149.exe",
         "/卸载工具/geek.exe": "https://r2.mangzhexuexi.com/tvbox/geek.exe",
-        "/下载工具/NDM.exe": "https://r2.mangzhexuexi.com/tvbox/NeatDM_setup.exe"
+        "/下载工具/NDM.exe": "https://r2.mangzhexuexi.com/tvbox/NeatDM_setup.exe",
+        "/局域网/局域网共享精灵企业版.exe": "https://r2.mangzhexuexi.com/tvbox/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B1%E4%BA%AB%E7%B2%BE%E7%81%B5%E4%BC%81%E4%B8%9A%E7%89%88.exe"
       }),
     },
     // ... 可以配置多个挂载路径和仓库，以此类推
