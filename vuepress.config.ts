@@ -143,8 +143,8 @@ export default defineUserConfig({
         "/windows电脑版/vlc-3.0.21-win64.exe": "https://get.videolan.org/vlc/3.0.21/win64/vlc-3.0.21-win64.exe",
         "/windows电脑版/电视台在线播放.md": "https://r2.mangzhexuexi.com/tvbox/tv.md",
         "/windows电脑版/使用说明.md": "https://r2.mangzhexuexi.com/tvbox/win.md",
-        "/OK影视-电视版-3.0.0.apk": "http://ctv.mangzhexuexi.com/OK%E5%BD%B1%E8%A7%86-%E7%94%B5%E8%A7%86%E7%89%88-3.0.0.apk",
-        "/OK影视-手机版-3.1.5.apk": "http://ctv.mangzhexuexi.com/OK%E5%BD%B1%E8%A7%86-%E6%89%8B%E6%9C%BA%E7%89%88-3.1.5.apk"
+        "/让我看看-电视版-1.0.0.apk": "http://ctv.mangzhexuexi.com/leanback-1.0.0.apk",
+        "/让我看看-手机版-1.0.0.apk": "http://ctv.mangzhexuexi.com/mobile-1.0.0.apk"
       }),
     },
     {
