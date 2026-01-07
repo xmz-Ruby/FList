@@ -147,7 +147,7 @@ export default defineUserConfig({
       // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
       analysis: fileUrlTreeAnalysis({
         "/让我看看-电视版-1.0.8.apk": "https://15414.kstore.space/leanback-1.0.8.apk",
-        "/让我看看-手机版-1.0.8.apk": "https://15414.kstore.space/mobile-1.0.8.apk"
+        "/让我看看-手机版-1.0.9.apk": "https://15414.kstore.space/mobile-1.0.9.apk"
       }),
     },
     {
