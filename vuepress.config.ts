@@ -103,7 +103,14 @@ export default defineUserConfig({
       analysis: fileUrlTreeAnalysis({
         "/HillsLite-v0.4.0.zip": "https://r2.mzxx.de5.net/tvbox/HillsLite-v0.4.0.zip"
       }),
-      downProxy: cloudflarePagesDownProxy(),
+      // downProxy: cloudflarePagesDownProxy(),
+    },
+    {
+      mountPath: "/娱乐软件/影视",
+      analysis: fileUrlTreeAnalysis({
+        "/HillsLite-v0.4.0.zip-UC网盘": "https://fast.uc.cn/s/fa572a162b784?public=1"
+      }),
+      // downProxy: cloudflarePagesDownProxy(),
     },
     // {
     //   mountPath: "/",
