@@ -160,9 +160,9 @@ export default defineUserConfig({
       mountPath: "/娱乐软件/影视",
       // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
       analysis: fileUrlTreeAnalysis({
-        "/让我看看-电视版64位-2.0.1.apk": "https://15414.kstore.space/%E8%AE%A9%E6%88%91%E7%9C%8B%E7%9C%8B-%E7%94%B5%E8%A7%86%E7%89%8864%E4%BD%8D-2.0.1.apk",
-        "/让我看看-电视版-2.0.1.apk": "https://15414.kstore.space/%E8%AE%A9%E6%88%91%E7%9C%8B%E7%9C%8B-%E7%94%B5%E8%A7%86%E7%89%88-2.0.1.apk",
-        "/让我看看-手机版-2.0.1.apk": "https://15414.kstore.space/%E8%AE%A9%E6%88%91%E7%9C%8B%E7%9C%8B-%E6%89%8B%E6%9C%BA%E7%89%88-2.0.1.apk"
+        "/让我看看-电视版64位-2.0.2.apk": "https://15414.kstore.space/%E8%AE%A9%E6%88%91%E7%9C%8B%E7%9C%8B-%E7%94%B5%E8%A7%86%E7%89%8864%E4%BD%8D-2.0.2.apk",
+        "/让我看看-电视版-2.0.2.apk": "https://15414.kstore.space/%E8%AE%A9%E6%88%91%E7%9C%8B%E7%9C%8B-%E7%94%B5%E8%A7%86%E7%89%88-2.0.2.apk",
+        "/让我看看-手机版-2.0.2.apk": "https://15414.kstore.space/%E8%AE%A9%E6%88%91%E7%9C%8B%E7%9C%8B-%E6%89%8B%E6%9C%BA%E7%89%88-2.0.2.apk"
       }),
     },
     {
