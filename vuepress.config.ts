@@ -176,6 +176,13 @@ export default defineUserConfig({
       }),
     },
     {
+      mountPath: "/常用工具/开发",
+      analysis: fileUrlTreeAnalysis({
+        "/ja-netfilter-2025.3.zip": "https://r2.mzxx.de5.net/tvbox/ja-netfilter-2025.3.zip"
+      }),
+      // downProxy: cloudflarePagesDownProxy(),
+    },
+    {
       mountPath: "/Android/Termux",
       analysis: githubReleasesFilesAnalysis({ user: "termux", repository: "termux-app" }),
       // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
