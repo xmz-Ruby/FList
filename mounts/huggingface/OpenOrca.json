@@ -1,0 +1,12 @@
+{
+  "analysis": {
+    "type": "huggingFaceDatasetsAnalysis",
+    "options": {
+      "userName": "Open-Orca",
+      "datasetsName": "OpenOrca",
+      "branchName": "main",
+      "path": "/",
+      "maxDeep": 3
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "analysis": {
+    "type": "giteeReleasesFilesAnalysis",
+    "options": {
+      "user": "jja8",
+      "repository": "flist-test",
+      "direction": "desc"
+    }
+  }
+}

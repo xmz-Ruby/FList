@@ -1,0 +1,9 @@
+{
+  "analysis": {
+    "type": "giteeReposAnalysis",
+    "options": {
+      "user": "jja8",
+      "repository": "flist-test"
+    }
+  }
+}
