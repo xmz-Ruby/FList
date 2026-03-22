@@ -1,0 +1,11 @@
+{
+  "analysis": {
+    "type": "fileUrlTreeAnalysis",
+    "options": {
+      "/磁盘占用空间分布图/TreeSize.exe": "https://r2.mangzhexuexi.com/tvbox/TreeSize-Free-v2.5.1.149.exe",
+      "/卸载工具/geek.exe": "https://r2.mangzhexuexi.com/tvbox/geek.exe",
+      "/下载工具/NDM.exe": "https://r2.mangzhexuexi.com/tvbox/NeatDM_setup.exe",
+      "/局域网/局域网共享精灵企业版.exe": "https://r2.mangzhexuexi.com/tvbox/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B1%E4%BA%AB%E7%B2%BE%E7%81%B5%E4%BC%81%E4%B8%9A%E7%89%88.exe"
+    }
+  }
+}

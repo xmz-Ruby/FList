@@ -1,0 +1,9 @@
+{
+  "mountPath": "/娱乐软件/影视",
+  "analysis": {
+    "type": "fileUrlTreeAnalysis",
+    "options": {
+      "/HillsLite-v0.4.0.zip": "https://r2.mzxx.de5.net/tvbox/HillsLite-v0.4.0.zip"
+    }
+  }
+}

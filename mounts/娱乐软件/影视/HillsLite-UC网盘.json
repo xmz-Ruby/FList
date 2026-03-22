@@ -1,0 +1,9 @@
+{
+  "mountPath": "/娱乐软件/影视",
+  "analysis": {
+    "type": "fileUrlTreeAnalysis",
+    "options": {
+      "/HillsLite-v0.4.0.zip-UC网盘": "https://fast.uc.cn/s/fa572a162b784?public=1"
+    }
+  }
+}

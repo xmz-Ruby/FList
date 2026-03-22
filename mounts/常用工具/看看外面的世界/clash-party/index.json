@@ -1,0 +1,11 @@
+{
+  "analysis": {
+    "type": "githubReleasesFilesAnalysis",
+    "options": {
+      "user": "mihomo-party-org",
+      "repository": "clash-party",
+      "authorizationToken": { "$env": "GITHUB_TOKEN" },
+      "per_page": 2
+    }
+  }
+}

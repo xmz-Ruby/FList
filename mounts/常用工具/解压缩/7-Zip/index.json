@@ -1,0 +1,11 @@
+{
+  "analysis": {
+    "type": "githubReleasesFilesAnalysis",
+    "options": {
+      "user": "ip7z",
+      "repository": "7zip",
+      "authorizationToken": { "$env": "GITHUB_TOKEN" },
+      "per_page": 2
+    }
+  }
+}

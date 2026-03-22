@@ -12,6 +12,14 @@
 ### 创建自己的Flist
 [-> 点击前往 <-](https://jjaw.cn/2024/8/3/flist-fast-start/)
 
+## 挂载配置
+
+当前推荐的配置方式是将挂载项写入 `mounts/` 目录下的 `.json` 文件，而不是直接修改 `vuepress.config.ts`。
+
+- `mounts/` 下的目录结构会自动映射到站点路径
+- 如果多个配置需要挂载到同一路径，可以在 `.json` 中显式设置 `mountPath`
+- GitHub 仓库相关挂载推荐通过环境变量 `GITHUB_TOKEN` 传入授权令牌
+
 ## Cloudflare Pages 部署说明
 
 如果你在 Cloudflare Pages 遇到类似下面的错误：
