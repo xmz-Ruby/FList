@@ -1,6 +1,8 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
-import { FileList } from './src/node/index.js'
+import { FileList, fileUrlTreeAnalysis, githubReleasesFilesAnalysis } from './src/node/index.js'
+
+const githubToken = process.env.GITHUB_TOKEN ?? process.env.githubToken
 
 export default defineUserConfig({
   bundler: viteBundler(),
@@ -33,7 +35,7 @@ export default defineUserConfig({
       mountPath: "/常用工具/解压缩/7-Zip",
       analysis: githubReleasesFilesAnalysis({ user: "ip7z", repository: "7zip",
         // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
-        authorizationToken: process.env.githubToken,
+        authorizationToken: githubToken,
         // 分页大小，不懂得话就当作取最新的多少个标签吧。
         per_page: 2, }),
       // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
@@ -45,7 +47,7 @@ export default defineUserConfig({
       mountPath: "/常用工具/看看外面的世界/clash-party",
       analysis: githubReleasesFilesAnalysis({ user: "mihomo-party-org", repository: "clash-party",
         // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
-        authorizationToken: process.env.githubToken,
+        authorizationToken: githubToken,
         // 分页大小，不懂得话就当作取最新的多少个标签吧。
         per_page: 2, }),
       // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
@@ -57,7 +59,7 @@ export default defineUserConfig({
       mountPath: "/常用工具/看看外面的世界/FlClash",
       analysis: githubReleasesFilesAnalysis({ user: "chen08209", repository: "FlClash",
         // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
-        authorizationToken: process.env.githubToken,
+        authorizationToken: githubToken,
         // 分页大小，不懂得话就当作取最新的多少个标签吧。
         per_page: 2, }),
       // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
@@ -69,7 +71,7 @@ export default defineUserConfig({
       mountPath: "/常用工具/人工智能/cherry-studio",
       analysis: githubReleasesFilesAnalysis({ user: "CherryHQ", repository: "cherry-studio",
         // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
-        authorizationToken: process.env.githubToken,
+        authorizationToken: githubToken,
         // 分页大小，不懂得话就当作取最新的多少个标签吧。
         per_page: 2, }),
       // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
@@ -89,7 +91,7 @@ export default defineUserConfig({
       mountPath: "/常用工具/局域网/局域网文件共享",
       analysis: githubReleasesFilesAnalysis({ user: "localsend", repository: "localsend",
         // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
-        authorizationToken: process.env.githubToken,
+        authorizationToken: githubToken,
         // 分页大小，不懂得话就当作取最新的多少个标签吧。
         per_page: 2, }),
       // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
@@ -101,7 +103,7 @@ export default defineUserConfig({
       mountPath: "/娱乐软件/音乐/哔哩音乐",
       analysis: githubReleasesFilesAnalysis({ user: "wood3n", repository: "biu",
         // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
-        authorizationToken: process.env.githubToken,
+        authorizationToken: githubToken,
         // 分页大小，不懂得话就当作取最新的多少个标签吧。
         per_page: 2, }),
       // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/
@@ -197,7 +199,7 @@ export default defineUserConfig({
       mountPath: "/Android/Termux",
       analysis: githubReleasesFilesAnalysis({ user: "termux", repository: "termux-app",
         // github 授权 Token, process.env.xxx  xxx 是环境变量名称。可以通过设置 githubToken 环境变量来配置
-        authorizationToken: process.env.githubToken,
+        authorizationToken: githubToken,
         // 分页大小，不懂得话就当作取最新的多少个标签吧。
         per_page: 2, }),
       // 下载代理配置,支持多个平台，参考:https://jjaw.cn/2024/8/3/flist-config-porxy/

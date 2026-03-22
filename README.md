@@ -12,6 +12,31 @@
 ### 创建自己的Flist
 [-> 点击前往 <-](https://jjaw.cn/2024/8/3/flist-fast-start/)
 
+## Cloudflare Pages 部署说明
+
+如果你在 Cloudflare Pages 遇到类似下面的错误：
+
+```text
+SyntaxError: Unexpected token 'with'
+file:///.../cli-spinners/index.js
+```
+
+这通常不是项目代码本身的问题，而是 Cloudflare Pages 仍在使用旧的 `v2` 构建环境。
+`v2` 默认是 `Node.js 18.17.1` 和 `pnpm 8.7.1`，而当前依赖链中的 `cli-spinners` 需要更高版本的 Node.js 才能正常解析。
+
+这个仓库已经通过 `.node-version` / `.nvmrc` 固定到 `Node.js 22.16.0`，但如果你的 Pages 项目仍然失败，还需要检查以下配置：
+
+- 将 Pages 的 Build system version 升级到 `v3`
+- 或在 Cloudflare Pages 环境变量中设置 `NODE_VERSION=22.16.0`
+- 如果日志里出现 `Ignoring not compatible lockfile`，再额外设置 `PNPM_VERSION=10.11.1`
+
+推荐的 Cloudflare Pages 构建配置：
+
+- Build command: `pnpm run build`
+- Build output directory: `.vuepress/dist`
+
+如果你使用的是旧项目，Cloudflare 可能还在沿用旧的默认环境，这时仅仅重新部署通常不会生效，需要手动切换构建环境或补齐上面的环境变量。
+
 ## 为什么选择 FList
 - 💵 **低成本**：无需数据库，无需服务器，Cloudflare Pages、GitHub Pages、Vercel、Netlify 等都可以轻松部署，**使用成本几乎为零**。
 - 🧰 **丰富**：支持视频、音频、图片、PDF 文件的在线预览。
