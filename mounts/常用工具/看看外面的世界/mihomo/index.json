@@ -1,0 +1,11 @@
+{
+  "analysis": {
+    "type": "githubReleasesFilesAnalysis",
+    "options": {
+      "user": "MetaCubeX",
+      "repository": "mihomo",
+      "authorizationToken": { "$env": "GITHUB_TOKEN" },
+      "per_page": 5
+    }
+  }
+}
