@@ -7,6 +7,5 @@
       "authorizationToken": { "$env": "GITHUB_TOKEN" },
       "per_page": 5
     }
-  },
-  "downProxy": { "type": "cloudflarePagesDownProxy" }
+  }
 }
