@@ -45,6 +45,38 @@ file:///.../cli-spinners/index.js
 
 如果你使用的是旧项目，Cloudflare 可能还在沿用旧的默认环境，这时仅仅重新部署通常不会生效，需要手动切换构建环境或补齐上面的环境变量。
 
+## 每日自动更新（Cloudflare Pages）
+
+FList 在构建时获取 GitHub Releases 等挂载数据，因此线上文件列表默认是构建时的快照。仓库的独立定时 Worker 会每天调用 Cloudflare Pages Deploy Hook，重新构建并部署主站。默认时间为**北京时间每天早上 08:00**（UTC 00:00）。
+
+主站需要关联 Git 仓库，并将构建命令设为 `pnpm run build`、输出目录设为 `.vuepress/dist`。
+
+1. 在 Cloudflare 控制台打开 FList Pages 项目，进入 **Settings → Builds → Add deploy hook**，选择生产分支并复制 Deploy Hook URL。
+2. 在仓库根目录登录并部署定时 Worker：
+
+   ```sh
+   npx wrangler login
+   npx wrangler deploy --config scheduler/wrangler.toml
+   ```
+
+3. 将 Pages Deploy Hook URL 设置为 Worker Secret。运行后，按提示粘贴第一步复制的 URL：
+
+   ```sh
+   npx wrangler secret put CLOUDFLARE_PAGES_DEPLOY_HOOK --config scheduler/wrangler.toml
+   ```
+
+4. 在 Cloudflare 的 `flist-daily-update` Worker 监控日志；Pages Deploy Hook 请求成功表示已触发构建，文件列表会在构建和部署成功后更新。
+
+修改 [scheduler/wrangler.toml](scheduler/wrangler.toml) 的 `crons` 后，重新运行部署命令即可更改时间。Cron 使用 UTC；触发器变更最多可能需要 15 分钟生效。定时 Worker 只触发 Pages 构建；GitHub Releases 所需的 `GITHUB_TOKEN` 仍应配置在 Pages 构建环境中。Deploy Hook URL 是密钥，请勿公开或提交到代码。
+
+本地运行测试（不会触发真实部署）：
+
+```sh
+node --test scheduler/index.test.js
+```
+
+相关文档：[Cloudflare Pages Deploy Hooks](https://developers.cloudflare.com/pages/configuration/deploy-hooks/)、[Cloudflare Cron Triggers](https://developers.cloudflare.com/workers/configuration/cron-triggers/)。
+
 ## 为什么选择 FList
 - 💵 **低成本**：无需数据库，无需服务器，Cloudflare Pages、GitHub Pages、Vercel、Netlify 等都可以轻松部署，**使用成本几乎为零**。
 - 🧰 **丰富**：支持视频、音频、图片、PDF 文件的在线预览。
